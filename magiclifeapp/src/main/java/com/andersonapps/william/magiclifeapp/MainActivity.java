@@ -19,9 +19,16 @@ public class MainActivity extends AppCompatActivity {
         ImageButton playeroneplus = (ImageButton) findViewById(R.id.playeroneplus);
         ImageButton playertwominus = (ImageButton) findViewById(R.id.playertwominus);
         ImageButton playertwoplus = (ImageButton) findViewById(R.id.playertwoplus);
+        ImageButton playeroneminusfive = (ImageButton) findViewById(R.id.playeroneminusfive);
+        ImageButton playeroneplusfive = (ImageButton) findViewById(R.id.playeroneplusfive);
+        ImageButton playertwominusfive = (ImageButton) findViewById(R.id.playertwominusfive);
+        ImageButton playertwoplusfive = (ImageButton) findViewById(R.id.playertwoplusfive);
 
         playeronelife = (TextView) findViewById(R.id.lifetext1);
         playertwolife = (TextView) findViewById(R.id.lifetext2);
+
+
+        //Player One ImageButton Listeners
 
         playeroneminus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +42,24 @@ public class MainActivity extends AppCompatActivity {
                 playeronelife.setText(Integer.toString(Integer.parseInt(playeronelife.getText().toString())+1));
             }
         });
+
+        playeroneminusfive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playeronelife.setText(Integer.toString(Integer.parseInt(playeronelife.getText().toString())-5));
+            }
+        });
+        playeroneplusfive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playeronelife.setText(Integer.toString(Integer.parseInt(playeronelife.getText().toString())+5));
+            }
+        });
+
+
+
+        //Player Two ImageButton Listeners
+
         playertwominus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,6 +70,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 playertwolife.setText(Integer.toString(Integer.parseInt(playertwolife.getText().toString())+1));
+            }
+        });
+        playertwominusfive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playertwolife.setText(Integer.toString(Integer.parseInt(playertwolife.getText().toString())-5));
+            }
+        });
+        playertwoplusfive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playertwolife.setText(Integer.toString(Integer.parseInt(playertwolife.getText().toString())+5));
             }
         });
 
