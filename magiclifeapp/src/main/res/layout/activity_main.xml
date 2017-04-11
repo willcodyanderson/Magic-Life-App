@@ -9,7 +9,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/redstarburstbackground"
+            android:background="@drawable/p1background"
             android:layout_weight="50"
             android:gravity="center_horizontal">
             <LinearLayout
@@ -20,8 +20,8 @@
             <ImageButton
                 android:id="@+id/playeroneplusfive"
                 android:layout_gravity="center_vertical"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:background="@drawable/blueplus"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"/>
@@ -29,21 +29,56 @@
                 <ImageButton
                     android:id="@+id/playeroneplus"
                     android:layout_gravity="center_vertical"
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/blueplus"
                     android:layout_marginRight="10dp"/>
             </LinearLayout>
-            <TextView
-                android:rotation="180"
-                android:id="@+id/lifetext1"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="20"
-                android:layout_gravity="center_vertical"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="96dp" />
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <LinearLayout
+                    android:id="@+id/commanderpoisonlayoutp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/playeronepoison"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_gravity="center_vertical"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="25dp"
+                        android:rotation="180"
+                        android:textColor="#000000"
+                        android:textSize="50dp" />
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:id="@+id/playeronepoisonbutton"
+                        android:rotation="180"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:src="@drawable/poisonicon"/>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_marginBottom="70dp"
+                    android:id="@+id/lifetext1"
+                    android:layout_width="wrap_content"
+                    android:rotation="180"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="96dp" />
+
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,27 +88,71 @@
                 android:id="@+id/playeroneminusfive"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center_vertical"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:background="@drawable/blueminus"
                 android:layout_marginBottom="10dp"/>
                 <ImageButton
                     android:id="@+id/playeroneminus"
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/blueminus"/>
                 </LinearLayout>
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/toolbarbackground"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+            <ImageButton
+                android:id="@+id/commandergame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/commanderbutton" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+            <ImageButton
+                android:id="@+id/normalgame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/normalgamebutton" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+            <ImageButton
+                android:id="@+id/twoheadedgiantgame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/twoheadedgiantbutton" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
 
+        </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bluestarburstbackground"
+            android:background="@drawable/p2background"
             android:layout_weight="50"
             android:gravity="center_horizontal">
             <LinearLayout
@@ -85,27 +164,60 @@
                 android:id="@+id/playertwominus"
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center_vertical"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:background="@drawable/redminus"/>
                 <ImageButton
                     android:id="@+id/playertwominusfive"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/redminus"/>
                 </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
             <TextView
+                android:layout_marginTop="70dp"
                 android:id="@+id/lifetext2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20"
-                android:layout_gravity="center_vertical"
+                android:layout_gravity="center_horizontal"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="96dp" />
+                <LinearLayout
+                    android:id="@+id/commanderpoisonlayoutp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:id="@+id/playertwopoisonbutton"
+                    android:src="@drawable/poisonicon"/>
+                    <TextView
+
+                        android:id="@+id/playertwopoison"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="50dp" />
+                </LinearLayout>
+                </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -115,16 +227,16 @@
                 android:id="@+id/playertwoplus"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center_vertical"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:background="@drawable/redplus"/>
                 <ImageButton
                     android:id="@+id/playertwoplusfive"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/redplus"/>
                 </LinearLayout>
 
